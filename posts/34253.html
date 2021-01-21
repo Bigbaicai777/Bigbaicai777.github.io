@@ -377,15 +377,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -402,14 +393,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -462,17 +453,6 @@
 <p>2999</p>
 <p>…</p>
 <h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int Tosum(int num,int base)&#123;</span><br><span class="line">	int sum&#x3D;0;</span><br><span class="line">	sum&#x3D;num%base+(num&#x2F;base)%base+(num&#x2F;base&#x2F;base)%base+(num&#x2F;base&#x2F;base&#x2F;base)%base;</span><br><span class="line">	return sum;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	for(int i&#x3D;2992;i&lt;&#x3D;9999;i++)&#123;</span><br><span class="line">		if(Tosum(i,10)&#x3D;&#x3D;Tosum(i,12)&amp;&amp;Tosum(i,12)&#x3D;&#x3D;Tosum(i,16))</span><br><span class="line">			cout&lt;&lt;i&lt;&lt;endl;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h2 id="PAT1002写出这个数"><a href="#PAT1002写出这个数" class="headerlink" title="PAT1002写出这个数"></a>PAT1002写出这个数</h2><p><a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/994805260223102976/problems/994805324509200384">传送门</a></p>
-<p>读入一个正整数 n，计算其各位数字之和，用汉语拼音写出和的每一位数字。</p>
-<h2 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h2><p>每个测试输入包含 1 个测试用例，即给出自然数 n 的值。这里保证 n 小于 10e100。</p>
-<blockquote>
-<p>1234567890987654321123456789</p>
-</blockquote>
-<h2 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h2><p>在一行内输出 n 的各位数字之和的每一位，拼音数字间有 1 空格，但一行中最后一个拼音数字后没有空格。</p>
-<blockquote>
-<p>yi san wu</p>
-</blockquote>
-<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main() &#123;</span><br><span class="line">    string s;</span><br><span class="line">    cin &gt;&gt; s;</span><br><span class="line">    int sum &#x3D; 0;</span><br><span class="line">    string str[10] &#x3D;  &#123;&quot;ling&quot;, &quot;yi&quot;, &quot;er&quot;, &quot;san&quot;, &quot;si&quot;, &quot;wu&quot;, &quot;liu&quot;, &quot;qi&quot;, &quot;ba&quot;, &quot;jiu&quot;&#125;;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; s.length(); i++)</span><br><span class="line">        sum +&#x3D; (s[i] - &#39;0&#39;);</span><br><span class="line">    string num &#x3D; to_string(sum);&#x2F;&#x2F;将int转为string</span><br><span class="line">    for (int i &#x3D; 0; i &lt; num.length(); i++) &#123;</span><br><span class="line">        if (i !&#x3D; 0) cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        cout &lt;&lt; str[num[i] - &#39;0&#39;];&#x2F;&#x2F;将数字对应拼音输出</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -733,9 +713,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/34253.html">
                     <div class="card-image">
@@ -753,9 +734,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -764,6 +745,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -779,16 +761,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/posts/63785.html">
+                <a href="/posts/34253.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="每日一练（1）">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <span class="card-title">每日一练（1）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -799,7 +781,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
                             </span>
                         <span class="publish-author">
                             
@@ -808,6 +790,15 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PAT/">
+                        <span class="chip bg-color">PAT</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1044,7 +1035,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.8k</span>&nbsp;字
+                class="white-color">1.2k</span>&nbsp;字
             
             
             
