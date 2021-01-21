@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, 十七不是七">
+    <meta name="keywords" content="每日一练（1）, 十七不是七">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | 十七不是七</title>
+    <title>每日一练（1） | 十七不是七</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">每日一练（1）</h1>
                 </div>
             </div>
         </div>
@@ -366,9 +366,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/PAT/">
+                                <span class="chip bg-color">PAT</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -380,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-20
+                    2021-01-21
                 </div>
                 
 
@@ -389,14 +393,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -416,12 +420,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>第一段</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>拜拜</p>
-
+                <h2 id="PAT1001-3n-1-猜想"><a href="#PAT1001-3n-1-猜想" class="headerlink" title="PAT1001 (3n+1)猜想"></a>PAT1001 (3n+1)猜想</h2><p><a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/994805260223102976/problems/994805325918486528">传送门</a></p>
+<p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>每个测试输入包含 1 个测试用例，即给出正整数 n 的值。</p>
+<blockquote>
+<p>3</p>
+</blockquote>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出从 n 计算到 1 需要的步数</p>
+<blockquote>
+<p>5</p>
+</blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">static int m&#x3D;0;</span><br><span class="line">int func(int n)&#123;</span><br><span class="line">	if(n&#x3D;&#x3D;1)return m;</span><br><span class="line">	else if(n%2&#x3D;&#x3D;0)&#123;</span><br><span class="line">		m++;</span><br><span class="line">		return func(n&#x2F;2);</span><br><span class="line">	&#125;</span><br><span class="line">		else if(n%2&#x3D;&#x3D;1)&#123;</span><br><span class="line">			m++;</span><br><span class="line">			return func((3*n+1)&#x2F;2);</span><br><span class="line">		&#125;	</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int number;</span><br><span class="line">	cin&gt;&gt;number;</span><br><span class="line">	func(number);</span><br><span class="line">	cout&lt;&lt;m;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h2 id="UVA492-【Pig-Latin】"><a href="#UVA492-【Pig-Latin】" class="headerlink" title="UVA492 【Pig-Latin】"></a>UVA492 【Pig-Latin】</h2><p>请您编写一个程序，输入任意数量行的文本，并以Pig Latin输出。每行文本将包含一个或多个单词。一个“单词”被定义为一个连续的字母序列（大写字母和/或小写字母）。单词根据以下的规则转换为Pig Latin，非单词的字符在输出时则和输入中出现的完全一样：</p>
+<ul>
+<li>[1] 以元音字母（a、e、i、o或u，以及这些字母的大写形式）开头的单词，要在其后面附加字符串“ay”（不包括双引号）。例如“apple”变成“appleay”。</li>
+<li>[2] 以辅音字母（不是A, a, E, e, I, i, O, o, U 或 u的任何字母）开头的单词，要去掉第一个辅音字母，并将之附加在单词的末尾，然<br>后再在单词的末尾加上“ay”。例如，“hello”变成“ellohay”。</li>
+<li>[3] 不要改变任何字母的大小写。。</li>
+</ul>
+<h2 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h2><p>This is the input.</p>
+<h2 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h2><p>hisTay isay hetay inputay.</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> str; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Ischar</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;<span class="comment">//判断是否是字母 </span></span><br><span class="line">	<span class="keyword">if</span>(c&gt;=<span class="string">&#x27;a&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;z&#x27;</span>||c&gt;=<span class="string">&#x27;A&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;Z&#x27;</span>) </span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Isvowl</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;<span class="comment">//判断是否元音 </span></span><br><span class="line">	<span class="keyword">if</span>(c==<span class="string">&#x27;a&#x27;</span>||c==<span class="string">&#x27;e&#x27;</span>||c==<span class="string">&#x27;i&#x27;</span>||c==<span class="string">&#x27;o&#x27;</span>||c==<span class="string">&#x27;u&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;A&#x27;</span>||c==<span class="string">&#x27;E&#x27;</span>||c==<span class="string">&#x27;I&#x27;</span>||c==<span class="string">&#x27;O&#x27;</span>||c==<span class="string">&#x27;U&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(getline(<span class="built_in">cin</span>,str))&#123;</span><br><span class="line">		<span class="keyword">int</span> s=<span class="number">0</span>;<span class="comment">//当前位置 </span></span><br><span class="line">		<span class="keyword">int</span> t=<span class="number">0</span>;<span class="comment">//单词偏移量 </span></span><br><span class="line">		<span class="keyword">while</span>(str[s])&#123;</span><br><span class="line">			<span class="keyword">if</span>(!Ischar(str[s])) &#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;str[s++];</span><br><span class="line">				t=s;<span class="comment">//不是字母就是空格，输出这个空格，并且将偏移量设置为0 </span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(Ischar(str[t]))&#123;<span class="comment">//是字母偏移量+1 </span></span><br><span class="line">				t++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(!Isvowl(str[s]))&#123;<span class="comment">//不是元音字母就从第二个字母打印 </span></span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> i=s+<span class="number">1</span>;i&lt;t;++i)&#123;</span><br><span class="line">						<span class="built_in">cout</span>&lt;&lt;str[i];</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="built_in">cout</span>&lt;&lt;str[s];</span><br><span class="line">				&#125;<span class="keyword">else</span><span class="comment">//是元音字母，从第一个开始打印，并在结尾附加ay </span></span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> i=s;i&lt;t;++i)</span><br><span class="line">						<span class="built_in">cout</span>&lt;&lt;str[i];</span><br><span class="line">					<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;ay&quot;</span>;</span><br><span class="line">					s=t;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125; 					</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="特殊的四位数字"><a href="#特殊的四位数字" class="headerlink" title="特殊的四位数字"></a>特殊的四位数字</h2><p>查找并列出所有以十进制表示的四位数，其四位数的总和等于以十六进制（以16为基数）表示的位数，并且也等于以十二进制表示的四位数的总和（以12为基数的符号。<br>例如，数字2991的（十进制）数字之和为2 + 9 + 9 + 1 =21。由于2991 = 1 * 1728 + 8 * 144 + 9 * 12 + 3，因此其十二进制表示为1893 12，这些数字总和也为21。但是十六进制的2991是BAF，而11 + 10 + 15 = 36，因此程序应拒绝2991。<br>但是，下一个数字（2992）在所有三个表示形式中的数字总和为22，因此2992应该在列出的输出上。（我们不希望使用少于四位数的十进制数字（不包括前导零），因此2992是第一个正确答案。）</p>
+<h2 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h2><p>没有输出</p>
+<h2 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h2><p>2992</p>
+<p>2993</p>
+<p>2994</p>
+<p>2995</p>
+<p>2996</p>
+<p>2997</p>
+<p>2998</p>
+<p>2999</p>
+<p>…</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int Tosum(int num,int base)&#123;</span><br><span class="line">	int sum&#x3D;0;</span><br><span class="line">	sum&#x3D;num%base+(num&#x2F;base)%base+(num&#x2F;base&#x2F;base)%base+(num&#x2F;base&#x2F;base&#x2F;base)%base;</span><br><span class="line">	return sum;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	for(int i&#x3D;2992;i&lt;&#x3D;9999;i++)&#123;</span><br><span class="line">		if(Tosum(i,10)&#x3D;&#x3D;Tosum(i,12)&amp;&amp;Tosum(i,12)&#x3D;&#x3D;Tosum(i,16))</span><br><span class="line">			cout&lt;&lt;i&lt;&lt;endl;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -447,7 +478,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://post.zz173.com/posts/63785.html">https://post.zz173.com/posts/63785.html</a>
+                    <a href="https://post.zz173.com/posts/34253.html">https://post.zz173.com/posts/34253.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -484,7 +515,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/PAT/">
+                                    <span class="chip bg-color">PAT</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -650,7 +685,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-01-20T16-15-42',
+        id: '2021-01-21T19-40-35',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -678,9 +713,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/34253.html">
                     <div class="card-image">
@@ -698,9 +734,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -709,6 +745,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -724,7 +761,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/posts/63785.html">
@@ -754,7 +791,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
